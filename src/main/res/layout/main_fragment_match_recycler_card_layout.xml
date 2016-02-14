@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    android:id="@+id/main_fragment_match_card_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardBackgroundColor="#fff"
+    android:elevation="4dp">
+
+<!--    <TextView
+        android:id="@+id/main_fragment_scan_view_card_layout_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_fragment_match_card_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/luffy"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/main_fragment_match_card_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/main_fragment_match_card_name_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#000"
+                    android:text="Luffy"
+                    android:textSize="24sp"/>
+
+                <ImageView
+                    android:id="@+id/main_fragment_match_card_gender_imageView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_toRightOf="@id/main_fragment_match_card_name_textView"
+                    android:layout_toEndOf="@id/main_fragment_match_card_name_textView"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/male"/>
+
+                <ImageButton
+                    android:id="@+id/main_fragment_match_card_care_imageButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_action_favorite"
+                    android:contentDescription="@string/contentDescription"
+                    android:background="#fff"
+                    android:layout_alignParentBottom="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@id/main_fragment_match_card_care_imageButton"
+                    android:layout_toLeftOf="@id/main_fragment_match_card_care_imageButton">
+                    <ImageButton
+                        android:id="@+id/main_fragment_match_card_good_imageButton"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_action_good"
+                        android:background="#fff"
+                        android:contentDescription="@string/contentDescription"/>
+                    
+                    <TextView
+                        android:id="@+id/main_fragment_match_card_good_count_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:text="102"
+                        android:textSize="18sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_fragment_match_card_line"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="4dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/main_fragment_match_card_name_layout"
+                android:background="@android:color/holo_blue_light"/>
+
+            <TextView
+                android:id="@+id/main_fragment_match_card_location_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toLeftOf="@id/main_fragment_match_card_line"
+                android:layout_toStartOf="@id/main_fragment_match_card_line"
+                android:layout_below="@id/main_fragment_match_card_name_layout"
+                android:textSize="16sp"
+                android:padding="2dp"
+                android:text="中南大学"/>
+
+
+            <TextView
+                android:id="@+id/main_fragment_match_card_same_tag_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_fragment_match_card_name_layout"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:text="#Android"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:background="@drawable/tag_selector"
+                android:elevation="2dp"/>
+
+            
+            <Button
+                android:id="@+id/main_fragment_match_card_like_btn"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_below="@id/main_fragment_match_card_same_tag_textView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:text="喜欢"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@android:color/darker_gray"/>
+            <Button
+                android:id="@+id/main_fragment_match_card_dislike_btn"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_toLeftOf="@id/main_fragment_match_card_like_btn"
+                android:layout_below="@id/main_fragment_match_card_same_tag_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+            android:text="不喜欢"
+                android:textSize="20sp"
+                android:textColor="@android:color/darker_gray"/>
+
+
+        </RelativeLayout>
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>

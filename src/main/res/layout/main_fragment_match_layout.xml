@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#e5e5e5">
+
+    <!--扫描布局-->
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/main_fragment_scanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.find.custom.view.ScanView
+            android:id="@+id/main_fragment_scanView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/main_fragment_scanView_setting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/setting_btn_selector"
+            android:src="@drawable/ic_action_settings"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:elevation="8dp"/>
+
+
+    </RelativeLayout>
+
+    <!--match success layout-->
+    <RelativeLayout
+        android:id="@+id/main_fragment_scan_success_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/main_fragment_scan_success_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

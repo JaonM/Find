@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_fragment_share_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5">
+
+    <ProgressBar
+        android:id="@+id/main_fragment_share_progressBar"
+        style="@style/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/main_fragment_share_swipeRefreshLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone">-->
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_fragment_share_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <ImageButton
+        android:id="@+id/main_fragment_share_write_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_action_edit"
+        android:elevation="4dp"
+        android:background="@drawable/setting_btn_selector"/>
+
+    <RelativeLayout
+        android:id="@+id/main_fragment_share_top_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tag_selector"
+        android:layout_below="@id/main_fragment_header_layout">
+        <TextView
+            android:id="@+id/main_fragment_share_range_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="所有人"/>
+
+        <ImageView
+            android:id="@+id/main_fragment_share_triangle_imageView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="16dp"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="centerCrop"
+            android:src="@drawable/triangle_down"/>
+
+        <ImageButton
+            android:id="@+id/main_fragment_share_refresh_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/main_fragment_share_triangle_imageView"
+            android:layout_toStartOf="@id/main_fragment_share_triangle_imageView"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/ic_action_refresh_dark"
+            android:background="@drawable/tag_selector"/>
+
+        <TextView
+            android:id="@+id/main_fragment_share_top_menu_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ececec"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/main_fragment_share_menu_recyclerView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_fragment_share_top_menu_layout"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#fff">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_fragment_share_menu_mRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

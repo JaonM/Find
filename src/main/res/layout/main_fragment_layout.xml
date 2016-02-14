@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_fragment_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/main_fragment_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_fragment_toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:minHeight="?android:attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:text="Find"/>
+                </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <com.astuetz.PagerSlidingTabStrip
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_fragment_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/main_fragment_toolBar"
+            android:layout_gravity="center"
+            app:pstsIndicatorColor="#fff"
+            app:pstsShouldExpand="false"
+            app:pstsDividerPadding="8dp"
+            app:pstsUnderlineColor="#fff"
+            app:pstsUnderlineHeight="4dp"
+            android:textColor="#fff"/>
+
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/main_fragment_share_top_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tag_selector"
+        android:layout_below="@id/main_fragment_header_layout">
+        <TextView
+            android:id="@+id/main_fragment_share_range_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="所有人"/>
+
+        <ImageView
+            android:id="@+id/main_fragment_share_triangle_imageView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="16dp"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="centerCrop"
+            android:src="@drawable/triangle_down"/>
+
+        <TextView
+            android:id="@+id/main_fragment_share_top_menu_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ececec"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/main_fragment_share_menu_recyclerView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_fragment_share_top_menu_layout"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#fff">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_fragment_share_menu_mRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"/>
+    </LinearLayout>-->
+
+</RelativeLayout>
